@@ -2,7 +2,7 @@ import sys, time
 import pytest
 
 sys.path.append('./src')
-from nsi2000 import Measurement, FarField, Script, BeamTable, OEWGProbeType
+from pynsi import Measurement, FarField, Script, BeamTable, OEWGProbeType
 
 # measurement = Measurement(r'C:\NSI2000\Data\pla11.nsi')
 # farField    = FarField(measurement)
