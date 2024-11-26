@@ -469,6 +469,6 @@ class Script(Measurement):
       except:
         raise Exception
     else:
-      raise FileNotFoundError, "File not found: %s"%filename
+      raise FileNotFoundError
     
 

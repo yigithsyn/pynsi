@@ -12,9 +12,8 @@ from pynsi import Measurement, FarField, Script, BeamTable, OEWGProbeType
 print("")
 # print(measurement.file)
 # script.runFile(r'C:\NSI2000\Script\HelloWorld.bas')
-# script.importNFData(r"D:\ATAM\03 OLCUMLER\03 ANTEN\2024\057 ASELSAN\02 OLCUM DOSYALARI\02 ISIMA DESENI\SGH\NFScan.prm")
 
-measurement = Measurement(r"D:\ATAM\03 OLCUMLER\03 ANTEN\2024\069 RST ELEKTRONIK\02 OLCUM DOSYALARI\02 ISIMA DESENI\66\NFScan.NSI")
+measurement = Measurement(r'C:\NSI2000\Data\pla11.nsi')
 beamTable   = BeamTable(measurement)
 farField    = FarField(measurement)
 
@@ -74,14 +73,5 @@ for i in range(beamTable.Count()):
   break
   time.sleep(0.1)
 
-# farfield = measurement.FarField()
-
-# assert print(pynsi.measurementFile()) == None
-
-# assert pynsi.selectBeam(5) == 0
 
 
-# # assert pynsi.importNFData("D:\\ATAM\\03 OLCUMLER\\03 ANTEN\\2024\\067 ERA HABERLESME\\02 OLCUM DOSYALARI\\02 ISIMA DESENI\\Downlink_LHCP\\NFScan.prm", 267, 267) == None
-# # assert pynsi.runScriptFile("C:\\NSI2000\\Script\\ImportNFDataCurrent.bas") == None
-
-# assert print(pynsi.measurementFile(r'C:\NSI2000\Data\pla11.nsi')) == None
