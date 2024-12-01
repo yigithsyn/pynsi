@@ -145,12 +145,12 @@ class FarField(Measurement):
   def EPRINC(self) -> None:
     r""" Sets the display pol flag to Co-pol (Pol-1)
     """
-    self.meas.console.FF_EPRINC
+    self.meas.console.FF_EPRINC()
 
   def ECROSS(self) -> None:
     r""" Sets the display pol flag to Cross-pol (Pol-2)
     """
-    self.meas.console.FF_ECROSS
+    self.meas.console.FF_ECROSS()
 
 
   # Output resolution
