@@ -224,6 +224,36 @@ class FarField(Measurement):
     """
     self.meas.console.FF_THPH()
 
+  # Farfield sense select routines
+  def FF_TAU(self, tau: float = None):
+    r""" returns or sets the far-field Tau angle
+    """
+    if tau != None: self.meas.console.FF_TAU = tau
+    else: return self.meas.console.FF_TAU
+  def FF_AUTO_TAU_AT_PEAK(self, state: bool = True):
+    r""" sets a flag to automatically calculate the Tau angle
+    """
+    self.meas.console.FF_AUTO_TAU_AT_PEAK = state
+  def FF_REFERENCE_POL_MATCHES_MEASPOL1(self, state: bool = True):
+    r""" sets a flag to force the Tau angle to match the measurement Pol-1 sense
+    """
+    self.meas.console.FF_REFERENCE_POL_MATCHES_MEASPOL1 = state
+  def FF_LINEAR_POL(self):
+    r""" sets the far-field sense flag = Linear
+    """
+    self.meas.console.FF_REFERENCE_POL_MATCHES_MEASPOL1 = True
+    self.meas.console.FF_LINEAR_POL()
+  def FF_RHCP(self):
+    r""" sets the far-field sense flag = RHCP
+    """
+    self.meas.console.FF_REFERENCE_POL_MATCHES_MEASPOL1 = False
+    self.meas.console.FF_RHCP()
+  def FF_LHCP(self):
+    r""" sets the far-field sense flag = LHCP
+    """
+    self.meas.console.FF_REFERENCE_POL_MATCHES_MEASPOL1 = False
+    self.meas.console.FF_LHCP()
+
   # Polarization select routines
   def L2_AZ_OVER_EL(self):
     r""" Sets the polarization flag to EazEel
