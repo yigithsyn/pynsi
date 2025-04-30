@@ -406,6 +406,15 @@ class FarField(Measurement):
     return (self.meas.console.FF_SIDELOBE_LEFT_LOC, self.meas.console.FF_SIDELOBE_LEFT_VAL, self.meas.console.FF_SIDELOBE_RIGHT_LOC, self.meas.console.FF_SIDELOBE_RIGHT_VAL)  
   
   # Gain calibration routines
+  def FF_UPDATE_CAL_FROM_CAL_FILE(self, state: bool = True) -> None:
+    r""" Sets the flag to update the SGA max far-field (FF_SGA_PEAK) from the file
+    
+    Parameters
+    ----------
+    state : bool
+      update gain from calibration file
+    """
+    self.meas.console.FF_UPDATE_CAL_FROM_CAL_FILE = state
   def FF_CAL_FILENAME(self, filename: str) -> None:
     r""" Sets the calibration filename that stores the gain reference max far-field values
     
@@ -420,6 +429,15 @@ class FarField(Measurement):
     else:
       raise FileNotFoundError
 
+  def FF_UPDATE_GAIN_FROM_GAIN_TABLE_FILE(self, state: bool = True) -> None:
+    r""" Sets the flag to update the SGA max far-field (FF_SGA_PEAK) from the file
+    
+    Parameters
+    ----------
+    state : bool
+      update gain from gain table file
+    """
+    self.meas.console.FF_UPDATE_GAIN_FROM_GAIN_TABLE_FILE = state
   def FF_GAIN_TABLE_FILENAME(self, filename: str) -> None:
     r""" Sets gain table filename that stores the obtained gain values of reference
     
