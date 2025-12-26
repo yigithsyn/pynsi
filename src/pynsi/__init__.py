@@ -1,1 +1,1 @@
-from .Measurement import Measurement, ProbeType, Script, FarField, BeamTable, OEWGProbeType
+from .Measurement import Measurement, ProbeType, Script, NearField, FarField, BeamTable, OEWGProbeType

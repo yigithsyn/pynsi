@@ -1,3 +1,2 @@
-Update:
-- FarField :: FF_UPDATE_CAL_FROM_CAL_FILE
-- FarField :: FF_UPDATE_GAIN_FROM_GAIN_TABLE_FILE
+Added:
+- NearField :: LISTING_TO_FILE
