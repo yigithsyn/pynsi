@@ -29,7 +29,7 @@ setup \
     , author           = "Hüseyin YİĞİT"
     , author_email     = "yigit.hsyn@gmail.com"
     , install_requires = \
-        [ 'pywin32' ]
+        [ 'pywin32==308' ]
     , packages         = find_namespace_packages(where='src'),
       package_dir      = {"": "src"}
     , platforms        = 'Any'
