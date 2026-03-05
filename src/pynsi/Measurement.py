@@ -345,7 +345,7 @@ class FarField(Measurement):
     if oewg: self.meas.console.FF_PROBE_OEWG_TYPE = oewg
     return self.meas.console.FF_PROBE_OEWG_TYPE
 
-  def FF_DISPLAY_SOURCE(self, format: DisplayFormat) -> DisplayFormat:
+  def FF_DISPLAY_SOURCE(self, format: DisplayFormat = DisplayFormat.AMPLITUDE) -> DisplayFormat:
     r""" The options control which source (amp or phase) will be plotted when making a plot
     """
     self.meas.console.FF_DISPLAY_SOURCE = format
