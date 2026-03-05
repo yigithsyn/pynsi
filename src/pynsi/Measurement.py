@@ -233,15 +233,15 @@ class FarField(Measurement):
     self.meas.console.FF_AUTO_V_CENTER_OFF()
 
   # Coordinate system select routines
-  def AZ_OVER_EL(self):
+  def FF_AZ_OVER_EL(self):
     r""" Sets the coordinate system to Az/El
     """
     self.meas.console.FF_AZ_OVER_EL()
-  def EL_OVER_AZ(self):
+  def FF_EL_OVER_AZ(self):
     r""" Sets the coordinate system to El/Az
     """
     self.meas.console.FF_EL_OVER_AZ()
-  def THPH(self):
+  def FF_THPH(self):
     r""" Sets the coordinate system to Theta/Phi
     """
     self.meas.console.FF_THPH()
