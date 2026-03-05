@@ -295,6 +295,14 @@ class FarField(Measurement):
     r""" Sets the probe correction model to Open ended waveguide (OEWG)
     """
     self.meas.console.FF_PC_OEWG()
+  def PC_NONE(self) -> None:
+    r""" Sets the probe correction model to None (No probe correction)
+    """
+    self.meas.console.FF_PC_NONE()
+  def FF_PC_COSINE(self) -> None:
+    r""" Sets the probe correction model to Cosine pattern
+    """
+    self.meas.console.FF_PC_COSINE()
   
   def PROBE_OEWG_TYPE(self, oewg: OEWGProbeType = None):
     r""" Returns or sets the OEWG probe model
