@@ -176,7 +176,7 @@ class FarField(Measurement):
 
 
   # Output resolution
-  def HPTS(self, number: int = None):
+  def FF_HPTS(self, number: int = None):
     r""" Sets/Gets number of HCut points
 
     Parameters
@@ -193,7 +193,7 @@ class FarField(Measurement):
     if number: self.meas.console.FF_HPTS = number
     return self.meas.console.FF_HPTS
   
-  def VPTS(self, number: int = None):
+  def FF_VPTS(self, number: int = None):
     r""" Sets/Gets number of VCut points
 
     Parameters
@@ -345,11 +345,11 @@ class FarField(Measurement):
     if oewg: self.meas.console.FF_PROBE_OEWG_TYPE = oewg
     return self.meas.console.FF_PROBE_OEWG_TYPE
 
-  def FF_DISPLAY_SOURCE(self, format: DisplayFormat = DisplayFormat.AMPLITUDE) -> DisplayFormat:
+  def FF_DISPLAY_SOURCE(self, format: DisplayFormat = None) -> DisplayFormat:
     r""" The options control which source (amp or phase) will be plotted when making a plot
     """
-    self.meas.console.FF_DISPLAY_SOURCE = format
-    return format
+    if format: self.meas.console.FF_DISPLAY_SOURCE = format
+    return self.meas.console.FF_DISPLAY_SOURCE
     
   
   def NO_PLOT(self):
