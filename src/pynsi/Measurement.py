@@ -176,7 +176,7 @@ class FarField(Measurement):
 
 
   # Output resolution
-  def FF_HPTS(self, number: int = None):
+  def FF_HPTS(self, number: int = None) -> int:
     r""" Sets/Gets number of HCut points
 
     Parameters
@@ -193,7 +193,7 @@ class FarField(Measurement):
     if number: self.meas.console.FF_HPTS = number
     return self.meas.console.FF_HPTS
   
-  def FF_VPTS(self, number: int = None):
+  def FF_VPTS(self, number: int = None) -> int:
     r""" Sets/Gets number of VCut points
 
     Parameters
