@@ -35,6 +35,10 @@ class OEWGProbeType(IntEnum):
   WR15   = 22
   WR12   = 23
 
+class DISPLAY_FORMAT(IntEnum):
+  AMPLITUDE   = 0
+  AXIAL_RATIO = 3
+
 class Measurement:
   r""" Open measurement file or bind active measurement
 
@@ -341,6 +345,11 @@ class FarField(Measurement):
     if oewg: self.meas.console.FF_PROBE_OEWG_TYPE = oewg
     return self.meas.console.FF_PROBE_OEWG_TYPE
 
+  def FF_DISPLAY_SOURCE(self, format: DISPLAY_FORMAT):
+    r""" The options control which source (amp or phase) will be plotted when making a plot
+    """
+    self.meas.console.FF_DISPLAY_SOURCE = format
+    
   
   def NO_PLOT(self):
     r""" Produce far-field data without making a plot
