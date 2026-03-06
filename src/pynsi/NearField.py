@@ -1,4 +1,4 @@
-import Measurement
+from .Measurement import Measurement
 
 class NearField(Measurement):
   r""" Near field processing for selected measurement
